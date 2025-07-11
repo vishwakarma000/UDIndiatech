@@ -18,6 +18,32 @@
       margin: 0;
       padding: 0;
     } */
+/* 
+    .testimonial-slider {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  display: block;
+} */
 
     /* .navbar {
       display: flex;
@@ -272,7 +298,7 @@
     <div class="max-w-5xl mx-auto">
       <h2 class="text-4xl font-bold text-center text-black mb-8">About Us</h2>
       <p class="text-lg leading-relaxed space-y-4">
-        <span class="block mb-4">At <span class="font-semibold text-indigo-600">UdindiaTech</span>, we don’t just
+        <span class="block mb-4">At <span class="font-semibold text-indigo-600">UdIndiaTech</span>, we don’t just
           provide IT services — we craft solutions that transform your business.</span>
 
         <span class="block mb-4">As a dedicated IT consulting and services company, we empower startups, SMEs, and
@@ -319,14 +345,16 @@
         <p>"Great platform for affordable IT training with real outcomes." - Rohit K., Python Developer</p>
     </div> -->
 
-  <div class="section" id="testimonials">
-    <h2 class="text-4xl font-bold text-center text-black mb-8">What Our Students Say</h2>
-    <div class="testimonial-slider-wrapper">
-      <div class="testimonial-slider" id="testimonial-slider">
-        <!-- JS will inject testimonial cards here -->
+  <section class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-black mb-8">What Our Students Say</h2>
+
+    <!-- Slider Wrapper -->
+    <div class="overflow-hidden w-full">
+      <div id="testimonial-slider" class="flex gap-5 transition-transform duration-500 ease-in-out">
+        <!-- Cards injected by JS -->
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Our Training Process -->
   <div class="section">
@@ -457,74 +485,74 @@
 
   //   ----------------------------------testimonls 
   const testimonials = [
-    {
-      name: "Priya S.",
-      role: "Java Full Stack",
-      quote: "UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent.",
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-    {
-      name: "Rohit K.",
-      role: "Python Developer",
-      quote: "Great platform for affordable IT training with real outcomes.",
-      image: "https://randomuser.me/api/portraits/men/35.jpg"
-    },
-    {
-      name: "Anjali M.",
-      role: "UI/UX Designer",
-      quote: "The mentorship and hands-on UI/UX projects were game-changing. Highly recommend!",
-      image: "https://randomuser.me/api/portraits/women/68.jpg"
-    },
-    {
-      name: "Arjun V.",
-      role: "Cloud DevOps",
-      quote: "Trainers are so experienced and helpful. I got placed at Infosys!",
-      image: "https://randomuser.me/api/portraits/men/75.jpg"
+      {
+        name: "Priya S.",
+        role: "Java Full Stack",
+        quote: "UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent.",
+        image: "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      {
+        name: "Rohit K.",
+        role: "Python Developer",
+        quote: "Great platform for affordable IT training with real outcomes.",
+        image: "https://randomuser.me/api/portraits/men/35.jpg"
+      },
+      {
+        name: "Anjali M.",
+        role: "UI/UX Designer",
+        quote: "The mentorship and hands-on UI/UX projects were game-changing. Highly recommend!",
+        image: "https://randomuser.me/api/portraits/women/68.jpg"
+      },
+      {
+        name: "Arjun V.",
+        role: "Cloud DevOps",
+        quote: "Trainers are so experienced and helpful. I got placed at Infosys!",
+        image: "https://randomuser.me/api/portraits/men/75.jpg"
+      }
+    ];
+
+    const slider = document.getElementById("testimonial-slider");
+
+    // Repeat testimonials to simulate infinite loop
+    const extended = [...testimonials, ...testimonials];
+
+    extended.forEach(data => {
+      const card = document.createElement("div");
+      card.innerHTML = `
+        <div class="bg-white shadow-md rounded-lg p-5 sm:p-6 w-[250px] sm:w-[300px] flex-shrink-0 text-center">
+          <img src="${data.image}" alt="${data.name}" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover" />
+          <p class="text-gray-700 text-sm mb-2">"${data.quote}"</p>
+          <h4 class="font-semibold text-base">${data.name}</h4>
+          <span class="text-sm text-gray-500">${data.role}</span>
+        </div>
+      `;
+      slider.appendChild(card);
+    });
+
+    // Auto-slide
+    let currentIndex = 0;
+
+    function autoSlide() {
+      const card = slider.children[0];
+      const cardWidth = card.offsetWidth + 20; // gap-x
+      const total = slider.children.length;
+
+      const screenWidth = window.innerWidth;
+      const visibleCards = screenWidth < 640 ? 1 : 2;
+
+      currentIndex++;
+
+      if (currentIndex > total - visibleCards) {
+        slider.style.transition = "none";
+        slider.style.transform = `translateX(0px)`;
+        currentIndex = 0;
+      } else {
+        slider.style.transition = "transform 0.5s ease-in-out";
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
     }
-  ];
 
-  const slider = document.getElementById("testimonial-slider");
-
-  // Clone items to loop continuously
-  let extendedTestimonials = [...testimonials, ...testimonials];
-
-  // Create cards
-  extendedTestimonials.forEach(data => {
-    const card = document.createElement("div");
-    card.className = "testimonial-card";
-    card.innerHTML = `
-      <img src="${data.image}" alt="${data.name}" />
-      <p>"${data.quote}"</p>
-      <h4>${data.name}</h4>
-      <span>${data.role}</span>
-    `;
-    slider.appendChild(card);
-  });
-
-  // Slider logic
-  let currentSlide = 0;
-
-  function autoSlide() {
-    const totalCards = slider.children.length;
-    const isMobile = window.innerWidth < 768;
-    const step = isMobile ? 1 : 1;
-
-    currentSlide++;
-    const cardWidth = slider.children[0].offsetWidth + 20; // card + margin
-
-    // Reset position after full cycle
-    if (currentSlide >= totalCards - (isMobile ? 0 : 2)) {
-      slider.style.transition = "none";
-      slider.style.transform = "translateX(0)";
-      currentSlide = 0;
-    } else {
-      slider.style.transition = "transform 0.5s ease-in-out";
-      slider.style.transform = `translateX(-${cardWidth * currentSlide}px)`;
-    }
-  }
-
-  // Start auto slider
-  setInterval(autoSlide, 4000);
+    setInterval(autoSlide, 4000);
 
   const steps = document.querySelectorAll('.step');
   const revealSteps = () => {
