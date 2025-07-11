@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UdindiaTech - Premium IT Training</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- tailwind adding -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    } */
+
+    /* .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #003366;
+      color: #fff;
+      position: sticky;
+      top: 0;
+    } */
+
+    /* .navbar a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    } */
+
+    /* .navbar a.button {
+      background: #FFD700;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: 600;
+    } */
+
+    .slider {
+      position: relative;
+      height: 60vh;
+      background: url(images/Slider1.jpeg) center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .slider h1 {
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    /* .yellow-bar {
+      background: #FFD700;
+      color: #000;
+      padding: 10px;
+      text-align: center;
+      font-weight: 600;
+    } */
+
+    .yellow-bar {
+      background-color: #facc15;
+      /* similar to Tailwind's yellow-400 */
+      padding: 16px;
+      color: #000;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .stat-block {
+      margin: 10px;
+    }
+
+    .stat-number {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .stat-text {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .courses,
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .course {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      width: 200px;
+    }
+
+    .partner {
+      /* background: #f0f0f0; */
+      padding: 15px;
+      border-radius: 8px;
+      width: 200px;
+    }
+
+    /* ======================================== */
+    .partner>a>img {
+      border-radius: 20px;
+      height: 8rem;
+      width: 12rem;
+
+    }
+
+    footer {
+      /* background: #003366; */
+      background: #191919;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width:600px) {
+
+      .courses,
+      .partners {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+      <img src="images/UD logo.jpg" height="40px" width="40px" alt="UD Logo">
+      <strong>UdIndiaTech</strong>
+    </div>
+
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#partners">Placements</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#enroll" class="button">Enroll Now</a>
+    </div>
+  </div>
+  <!-- Slider -->
+  <!-- <div class="slider"> -->
+  <!-- <h1>Launch Your IT Career with UdindiaTech - 80% Scholarships Available</h1> -->
+  <!-- </div> -->
+
+  <!-- Slider Container -->
+  <div class="slider swiper mySwiper w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/Slider1.jpeg" alt="Slide 1" class="w-full h-full object-cover" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Slider2.jpeg" alt="Slide 2" class="w-full h-full object-cover" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Slider3.jpeg" alt="Slide 3" class="w-full h-full object-cover" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Slider4.jpeg" alt="Slide 4" class="w-full h-full object-cover" />
+      </div>
+    </div>
+
+    <!-- Optional Swiper Navigation -->
+    <div class="swiper-button-next text-white"></div>
+    <div class="swiper-button-prev text-white"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+  <!-- Yellow Bar (Achievements) -->
+  <!-- <div class="yellow-bar">
+    🎓 1000+ Students Trained &nbsp; | &nbsp; 💼  50+ Placement Partners &nbsp; | &nbsp; ⭐ 4.8/5 Student Ratings &nbsp;
+    | &nbsp; 🏆 25+ Industry-Relevant Courses
+  </div> -->
+  <div class="yellow-bar">
+    <div class="stats-container">
+      <div class="stat-block">
+        <div class="stat-number">🎓 1000+</div>
+        <div class="stat-text">Students Trained</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">💼 50+</div>
+        <div class="stat-text">Placement Partners</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">⭐ 4.8/5</div>
+        <div class="stat-text">Student Ratings</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">🏆 25+</div>
+        <div class="stat-text">Industry-Relevant Courses</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Our Training -->
+  <div class="section" id="courses">
+    <h2 class="text-4xl font-bold text-center text-black mb-8">Our Training Programs</h2>
+    <div class="courses">
+      <div class="course"><strong>Python Full Stack</strong><br>₹4,399/-<br>3 Months</div>
+      <div class="course"><strong>Java Full Stack</strong><br>₹4,999/-<br>3 Months</div>
+      <div class="course"><strong>MERN Stack</strong><br>₹4,399/-<br>3 Months</div>
+      <div class="course"><strong>UI/UX Design</strong><br>₹2,399/-<br>2 Months</div>
+      <div class="course"><strong>Cloud/DevOps</strong><br>₹4,999/-<br>2 Months</div>
+      <div class="course"><strong>Data Analyst</strong><br>₹3,999/-<br>2 Months</div>
+    </div>
+  </div>
+
+  <!-- Placement Partners -->
+  <div class="section" id="partners">
+    <h2 class="text-4xl font-bold text-center text-black mb-8">Placement Partners</h2>
+    <div class="partners">
+      <div class="partner"><a href="#"><img src="images/Cloudcredit tech.jpg"
+            alt="Cloudcredit technologies pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/Technohack.png" alt="Technohack solutions pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/Codealpha.jpg" alt="CodeAlpha"></a></div>
+      <div class="partner"><a href="#"><img src="images/codtech.jpg" alt="Codtech"></a></div>
+      <div class="partner"><a href="#"><img src="images/prodigy.jpg" alt="Prodigy infotech"></a></div>
+      <div class="partner"><a href="#"><img src="images/softechnova.jpg" alt="Softechnova Enterprises"></a></div>
+      <div class="partner"><a href="#"><img src="images/oasis.jpg" alt="oasis infobyte"></a></div>
+      <div class="partner"><a href="#"><img src="images/cognifyz.png" alt="Cognifyz technology"></a></div>
+      <div class="partner"><a href="#"><img src="images/hex.png" alt="Hexsoftwares"></a></div>
+      <div class="partner"><a href="#"><img src="images/pinnacle.png" alt="Pinnacle"></a></div>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div id="about" class="section bg-gray-100 py-16 px-4 sm:px-8 lg:px-20 text-gray-800">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-center text-black mb-8">About Us</h2>
+      <p class="text-lg leading-relaxed space-y-4">
+        <span class="block mb-4">At <span class="font-semibold text-indigo-600">UdindiaTech</span>, we don’t just
+          provide IT services — we craft solutions that transform your business.</span>
+
+        <span class="block mb-4">As a dedicated IT consulting and services company, we empower startups, SMEs, and
+          enterprises to navigate the digital landscape with confidence. From custom software and app development to
+          cloud solutions and IT strategy consulting, we ensure your technology aligns seamlessly with your business
+          goals.</span>
+
+        <span class="block mb-4">But we don’t stop there.</span>
+
+        <span class="block mb-4">Believing in giving back to mankind, we offer affordable, industry-focused IT training
+          programs, ensuring students and freshers gain practical skills with guaranteed internships or job
+          opportunities upon course completion.</span>
+
+        <span class="block font-semibold mt-6 text-black text-xl">✨ Why businesses and learners trust
+          UdindiaTech:</span>
+      <ul class="list-disc list-inside mt-2 space-y-2">
+        <li>✅ Proven track record of on-time project delivery</li>
+        <li>✅ Innovative, scalable, and secure solutions</li>
+        <li>✅ Transparent communication and dedicated support</li>
+        <li>✅ Training programs aligned with current industry demands</li>
+        <li>✅ Focus on your growth, not just your immediate project</li>
+      </ul>
+
+      <span class="block mt-6">Whether you are looking to innovate your business, transform your processes, or build a
+        future-ready tech career, <span class="font-semibold text-indigo-600">UdindiaTech</span> is your trusted
+        partner.</span>
+
+      <span class="block mt-4 font-semibold text-black">Let’s build your future with technology.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="section">
+    <h2 class="text-4xl font-bold text-center text-black mb-8">Why Choose UdindiaTech?</h2>
+    <p>✅ 80% Scholarship on All Courses &nbsp; | &nbsp; ✅ Industry Expert Trainers &nbsp; | &nbsp; ✅ Industries-Based
+      traning &nbsp; | &nbsp; ✅ Certificate & Placement Assistance</p>
+  </div>
+
+  <!-- Testimonials -->
+  <!-- <div class="section" id="testimonials">
+        <h2>What Our Students Say</h2>
+        <p>"UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent." - Priya S., Java Full Stack</p>
+        <p>"Great platform for affordable IT training with real outcomes." - Rohit K., Python Developer</p>
+    </div> -->
+
+  <div class="section" id="testimonials">
+    <h2 class="text-4xl font-bold text-center text-black mb-8">What Our Students Say</h2>
+    <div class="testimonial-slider-wrapper">
+      <div class="testimonial-slider" id="testimonial-slider">
+        <!-- JS will inject testimonial cards here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Training Process -->
+  <div class="section">
+    <h2 style="color:#FFD700;" class="text-4xl font-bold text-center mb-8">Our Training Process</h2>
+    <div class="process-flow" id="training-steps">
+      <div class="step">1️⃣ Enroll</div>
+      <div class="step">2️⃣ Attend Live Sessions</div>
+      <div class="step">3️⃣ Hands-on Projects</div>
+      <div class="step">4️⃣ Assessments</div>
+      <div class="step">5️⃣ Certification</div>
+      <div class="step">6️⃣ Placement Support</div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer -->
+
+  <footer class="bg-[#151515] text-white py-12 px-4 sm:px-8 lg:px-20" id="contact">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <!-- Company Info with Logo and Social Icons -->
+    <div>
+      <!-- Logo + Company Name in same row -->
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="images/UD logo.jpg" alt="UD India Tech Logo" class="w-12 h-12 object-contain" />
+        <h2 class="text-2xl font-bold">UD India Tech</h2>
+      </div>
+
+      <!-- Description -->
+      <p class="text-sm text-gray-300 mb-4">
+        We craft powerful IT solutions and offer affordable, job-oriented training with real-world projects and
+        guaranteed internships.
+      </p>
+
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-4">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <img src="images/instagram.jpg" alt="Instagram"
+            class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <img src="images/facebook.png" alt="Facebook"
+            class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.png" alt="YouTube"
+            class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <img src="images/linkedin.png" alt="LinkedIn"
+            class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+        <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Courses -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Our Courses</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>Full Stack Development</li>
+        <li>Cloud Computing</li>
+        <li>Data Science</li>
+        <li>Cyber Security</li>
+        <li>UI/UX Designing</li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+      <ul class="space-y-3 text-sm text-gray-300">
+        <li><strong>Address:</strong> Bhayandar (E), Mumbai, India</li>
+        <li><strong>Email:</strong> info.udindiatech@gmail.com</li>
+        <li><strong>Phone:</strong> +91 98765 43210</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +91 98765 43210</li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
+    © 2024 UD India Tech. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+  <!-- <footer>
+    <p>&copy; 2025 UdindiaTech. All Rights Reserved.</p>
+    <p>Contact: info.udindiatech@gmail.com | +91-9967646549</p>
+  </footer> -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</body>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('navLinks');
+    menu.classList.toggle('show');
+  }
+
+  // Auto-close menu on link click (mobile only)
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("#navLinks a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("show");
+      });
+    });
+  });
+
+
+  //   ----------------------------------testimonls 
+  const testimonials = [
+    {
+      name: "Priya S.",
+      role: "Java Full Stack",
+      quote: "UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent.",
+      image: "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      name: "Rohit K.",
+      role: "Python Developer",
+      quote: "Great platform for affordable IT training with real outcomes.",
+      image: "https://randomuser.me/api/portraits/men/35.jpg"
+    },
+    {
+      name: "Anjali M.",
+      role: "UI/UX Designer",
+      quote: "The mentorship and hands-on UI/UX projects were game-changing. Highly recommend!",
+      image: "https://randomuser.me/api/portraits/women/68.jpg"
+    },
+    {
+      name: "Arjun V.",
+      role: "Cloud DevOps",
+      quote: "Trainers are so experienced and helpful. I got placed at Infosys!",
+      image: "https://randomuser.me/api/portraits/men/75.jpg"
+    }
+  ];
+
+  const slider = document.getElementById("testimonial-slider");
+
+  // Clone items to loop continuously
+  let extendedTestimonials = [...testimonials, ...testimonials];
+
+  // Create cards
+  extendedTestimonials.forEach(data => {
+    const card = document.createElement("div");
+    card.className = "testimonial-card";
+    card.innerHTML = `
+      <img src="${data.image}" alt="${data.name}" />
+      <p>"${data.quote}"</p>
+      <h4>${data.name}</h4>
+      <span>${data.role}</span>
+    `;
+    slider.appendChild(card);
+  });
+
+  // Slider logic
+  let currentSlide = 0;
+
+  function autoSlide() {
+    const totalCards = slider.children.length;
+    const isMobile = window.innerWidth < 768;
+    const step = isMobile ? 1 : 1;
+
+    currentSlide++;
+    const cardWidth = slider.children[0].offsetWidth + 20; // card + margin
+
+    // Reset position after full cycle
+    if (currentSlide >= totalCards - (isMobile ? 0 : 2)) {
+      slider.style.transition = "none";
+      slider.style.transform = "translateX(0)";
+      currentSlide = 0;
+    } else {
+      slider.style.transition = "transform 0.5s ease-in-out";
+      slider.style.transform = `translateX(-${cardWidth * currentSlide}px)`;
+    }
+  }
+
+  // Start auto slider
+  setInterval(autoSlide, 4000);
+
+  const steps = document.querySelectorAll('.step');
+  const revealSteps = () => {
+    steps.forEach((step, index) => {
+      setTimeout(() => {
+        step.classList.add('show');
+      }, index * 300);
+    });
+  };
+
+  // Trigger on scroll
+  window.addEventListener('scroll', () => {
+    const section = document.getElementById('training-steps');
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      revealSteps();
+    }
+  });
+  //Slider
+  // <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js">
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
+      },
+    }
+  });
+
+
+</script>
+
+</html>
