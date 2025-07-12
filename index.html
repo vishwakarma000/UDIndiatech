@@ -10,7 +10,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     /* body {
@@ -18,7 +17,7 @@
       margin: 0;
       padding: 0;
     } */
-/* 
+    /* 
     .testimonial-slider {
   display: flex;
   gap: 20px;
@@ -71,23 +70,6 @@
       font-weight: 600;
     } */
 
-    .slider {
-      position: relative;
-      height: 60vh;
-      background: url(images/Slider1.jpeg) center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-    }
-
-    .slider h1 {
-      font-size: 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
 
     /* .yellow-bar {
       background: #FFD700;
@@ -174,6 +156,51 @@
       .partners {
         flex-direction: column;
         align-items: center;
+      }
+    }
+
+    /* why to choose css  */
+    .section {
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 30px;
+      line-height: 1.3;
+    }
+
+    .points {
+      display: inline-block;
+      text-align: left;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .point {
+      opacity: 0;
+      transform: translateX(-40px);
+      font-size: 16px;
+      margin: 15px 0;
+      transition: all 0.6s ease-out;
+      line-height: 1.5;
+    }
+
+    .point.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Responsive Text Size */
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 36px;
+      }
+
+      .point {
+        font-size: 18px;
       }
     }
   </style>
@@ -332,10 +359,20 @@
   </div>
 
   <!-- Why Choose Us -->
-  <div class="section">
+  <!-- <div class="section">
     <h2 class="text-4xl font-bold text-center text-black mb-8">Why Choose UdindiaTech?</h2>
     <p>✅ 80% Scholarship on All Courses &nbsp; | &nbsp; ✅ Industry Expert Trainers &nbsp; | &nbsp; ✅ Industries-Based
       traning &nbsp; | &nbsp; ✅ Certificate & Placement Assistance</p>
+  </div> -->
+  <div class="section py-16 px-4 bg-white text-center" id="why-section">
+    <h2 class="section-title">Why Choose <span style="color:#2563EB">UdindiaTech?</span></h2>
+
+    <div class="points">
+      <p class="point">✅ 80% Scholarship on All Courses</p>
+      <p class="point">✅ Industry Expert Trainers</p>
+      <p class="point">✅ Industries-Based Training</p>
+      <p class="point">✅ Certificate & Placement Assistance</p>
+    </div>
   </div>
 
   <!-- Testimonials -->
@@ -345,9 +382,8 @@
         <p>"Great platform for affordable IT training with real outcomes." - Rohit K., Python Developer</p>
     </div> -->
 
-  <section class="max-w-6xl mx-auto px-4">
+  <section class="section max-w-6xl mx-auto px-4" id="testimonials">
     <h2 class="text-3xl sm:text-4xl font-bold text-center text-black mb-8">What Our Students Say</h2>
-
     <!-- Slider Wrapper -->
     <div class="overflow-hidden w-full">
       <div id="testimonial-slider" class="flex gap-5 transition-transform duration-500 ease-in-out">
@@ -373,95 +409,87 @@
 
 
   <!-- Footer -->
-
   <footer class="bg-[#151515] text-white py-12 px-4 sm:px-8 lg:px-20" id="contact">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-    <!-- Company Info with Logo and Social Icons -->
-    <div>
-      <!-- Logo + Company Name in same row -->
-      <div class="flex items-center space-x-4 mb-4">
-        <img src="images/UD logo.jpg" alt="UD India Tech Logo" class="w-12 h-12 object-contain" />
-        <h2 class="text-2xl font-bold">UD India Tech</h2>
+      <!-- Company Info with Logo and Social Icons -->
+      <div>
+        <!-- Logo + Company Name in same row -->
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="images/UD logo.jpg" alt="UD India Tech Logo" class="w-12 h-12 object-contain" />
+          <h2 class="text-xl sm:text-xl md:text-2xl font-bold">UD India Tech</h2>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm text-gray-300 mb-4">
+          We craft powerful IT solutions and offer affordable, job-oriented training with real-world projects and
+          guaranteed internships.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-4 mt-4">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="images/instagram.jpg" alt="Instagram"
+              class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.png" alt="Facebook"
+              class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
+          </a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+            <img src="images/youtube.png" alt="YouTube"
+              class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn"
+              class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
+          </a>
+        </div>
       </div>
 
-      <!-- Description -->
-      <p class="text-sm text-gray-300 mb-4">
-        We craft powerful IT solutions and offer affordable, job-oriented training with real-world projects and
-        guaranteed internships.
-      </p>
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#home" class="hover:text-white transition">Home</a></li>
+          <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#services" class="hover:text-white transition">Services</a></li>
+          <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
+          <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
 
-      <!-- Social Icons -->
-      <div class="flex space-x-4 mt-4">
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.jpg" alt="Instagram"
-            class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
-        </a>
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook"
-            class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
-        </a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube"
-            class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
-        </a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="LinkedIn"
-            class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
-        </a>
+      <!-- Courses -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Our Courses</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li>Full Stack Development</li>
+          <li>Cloud Computing</li>
+          <li>Data Science</li>
+          <li>Cyber Security</li>
+          <li>UI/UX Designing</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li><strong>Address:</strong> Bhayandar (E), Mumbai, India</li>
+          <li><strong>Email:</strong> info.udindiatech@gmail.com</li>
+          <li><strong>Phone:</strong> +91 98765 43210</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +91 98765 43210</li>
+
+        </ul>
       </div>
     </div>
 
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li><a href="#home" class="hover:text-white transition">Home</a></li>
-        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
-        <li><a href="#services" class="hover:text-white transition">Services</a></li>
-        <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
-        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
-      </ul>
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
+      © 2024 UD India Tech. All rights reserved.
     </div>
+  </footer>
 
-    <!-- Courses -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Our Courses</h3>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li>Full Stack Development</li>
-        <li>Cloud Computing</li>
-        <li>Data Science</li>
-        <li>Cyber Security</li>
-        <li>UI/UX Designing</li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-      <ul class="space-y-3 text-sm text-gray-300">
-        <li><strong>Address:</strong> Bhayandar (E), Mumbai, India</li>
-        <li><strong>Email:</strong> info.udindiatech@gmail.com</li>
-        <li><strong>Phone:</strong> +91 98765 43210</li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +91 98765 43210</li>
-
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bottom Bar -->
-  <div class="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
-    © 2024 UD India Tech. All rights reserved.
-  </div>
-</footer>
-
-
-
-
-  <!-- <footer>
-    <p>&copy; 2025 UdindiaTech. All Rights Reserved.</p>
-    <p>Contact: info.udindiatech@gmail.com | +91-9967646549</p>
-  </footer> -->
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
@@ -485,40 +513,40 @@
 
   //   ----------------------------------testimonls 
   const testimonials = [
-      {
-        name: "Priya S.",
-        role: "Java Full Stack",
-        quote: "UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent.",
-        image: "https://randomuser.me/api/portraits/women/44.jpg"
-      },
-      {
-        name: "Rohit K.",
-        role: "Python Developer",
-        quote: "Great platform for affordable IT training with real outcomes.",
-        image: "https://randomuser.me/api/portraits/men/35.jpg"
-      },
-      {
-        name: "Anjali M.",
-        role: "UI/UX Designer",
-        quote: "The mentorship and hands-on UI/UX projects were game-changing. Highly recommend!",
-        image: "https://randomuser.me/api/portraits/women/68.jpg"
-      },
-      {
-        name: "Arjun V.",
-        role: "Cloud DevOps",
-        quote: "Trainers are so experienced and helpful. I got placed at Infosys!",
-        image: "https://randomuser.me/api/portraits/men/75.jpg"
-      }
-    ];
+    {
+      name: "Priya S.",
+      role: "Java Full Stack",
+      quote: "UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent.",
+      image: "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      name: "Rohit K.",
+      role: "Python Developer",
+      quote: "Great platform for affordable IT training with real outcomes.",
+      image: "https://randomuser.me/api/portraits/men/35.jpg"
+    },
+    {
+      name: "Anjali M.",
+      role: "UI/UX Designer",
+      quote: "The mentorship and hands-on UI/UX projects were game-changing. Highly recommend!",
+      image: "https://randomuser.me/api/portraits/women/68.jpg"
+    },
+    {
+      name: "Arjun V.",
+      role: "Cloud DevOps",
+      quote: "Trainers are so experienced and helpful. I got placed at Infosys!",
+      image: "https://randomuser.me/api/portraits/men/75.jpg"
+    }
+  ];
 
-    const slider = document.getElementById("testimonial-slider");
+  const slider = document.getElementById("testimonial-slider");
 
-    // Repeat testimonials to simulate infinite loop
-    const extended = [...testimonials, ...testimonials];
+  // Repeat testimonials to simulate infinite loop
+  const extended = [...testimonials, ...testimonials];
 
-    extended.forEach(data => {
-      const card = document.createElement("div");
-      card.innerHTML = `
+  extended.forEach(data => {
+    const card = document.createElement("div");
+    card.innerHTML = `
         <div class="bg-white shadow-md rounded-lg p-5 sm:p-6 w-[250px] sm:w-[300px] flex-shrink-0 text-center">
           <img src="${data.image}" alt="${data.name}" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover" />
           <p class="text-gray-700 text-sm mb-2">"${data.quote}"</p>
@@ -526,33 +554,33 @@
           <span class="text-sm text-gray-500">${data.role}</span>
         </div>
       `;
-      slider.appendChild(card);
-    });
+    slider.appendChild(card);
+  });
 
-    // Auto-slide
-    let currentIndex = 0;
+  // Auto-slide
+  let currentIndex = 0;
 
-    function autoSlide() {
-      const card = slider.children[0];
-      const cardWidth = card.offsetWidth + 20; // gap-x
-      const total = slider.children.length;
+  function autoSlide() {
+    const card = slider.children[0];
+    const cardWidth = card.offsetWidth + 20; // gap-x
+    const total = slider.children.length;
 
-      const screenWidth = window.innerWidth;
-      const visibleCards = screenWidth < 640 ? 1 : 2;
+    const screenWidth = window.innerWidth;
+    const visibleCards = screenWidth < 640 ? 1 : 2;
 
-      currentIndex++;
+    currentIndex++;
 
-      if (currentIndex > total - visibleCards) {
-        slider.style.transition = "none";
-        slider.style.transform = `translateX(0px)`;
-        currentIndex = 0;
-      } else {
-        slider.style.transition = "transform 0.5s ease-in-out";
-        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-      }
+    if (currentIndex > total - visibleCards) {
+      slider.style.transition = "none";
+      slider.style.transform = `translateX(0px)`;
+      currentIndex = 0;
+    } else {
+      slider.style.transition = "transform 0.5s ease-in-out";
+      slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
+  }
 
-    setInterval(autoSlide, 4000);
+  setInterval(autoSlide, 4000);
 
   const steps = document.querySelectorAll('.step');
   const revealSteps = () => {
@@ -603,6 +631,23 @@
     }
   });
 
+  //why to choose animation
+
+  const points = document.querySelectorAll('.point');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 200); // Delay for each point
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% visible
+  });
+
+  points.forEach(point => observer.observe(point));
 
 </script>
 
