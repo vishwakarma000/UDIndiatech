@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UdindiaTech - Premium IT Training</title>
+  <link rel="icon" href="images/UD logo.jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <!-- tailwind adding -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -111,8 +112,8 @@
       padding: 40px 20px;
       text-align: center;
     }
-
-    .courses,
+/* partners css    style */
+    /* .courses, */
     .partners {
       display: flex;
       flex-wrap: wrap;
@@ -120,12 +121,12 @@
       gap: 20px;
     }
 
-    .course {
+    /* .course {
       background: #f0f0f0;
       padding: 15px;
       border-radius: 8px;
       width: 200px;
-    }
+    } */
 
     .partner {
       /* background: #f0f0f0; */
@@ -137,7 +138,7 @@
     /* ======================================== */
     .partner>a>img {
       border-radius: 20px;
-      height: 8rem;
+      height: 7rem;
       width: 12rem;
 
     }
@@ -149,6 +150,43 @@
       text-align: center;
       padding: 20px;
     }
+
+    /* Course css */
+ .courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.course-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.course-card div {
+  padding: 15px;
+}
+.hidden-course {
+  display: none;
+}
 
     @media(max-width:600px) {
 
@@ -220,12 +258,13 @@
     <!-- Navigation Links -->
     <div class="nav-links" id="navLinks">
       <a href="#">Home</a>
-      <a href="#courses">Courses</a>
+      <a href="#Trainings">Trainings</a>
       <a href="#partners">Placements</a>
       <a href="#about">About</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
-      <a href="#enroll" class="button">Enroll Now</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdadHimci_y-aQBjbMR57K5SyL8CN7SacE4-4gFTyedFW6GAA/viewform"
+        target="_blank" class="button">Enroll Now</a>
     </div>
   </div>
   <!-- Slider -->
@@ -241,6 +280,16 @@
       </div>
       <div class="swiper-slide">
         <img src="images/Slider2.jpeg" alt="Slide 2" class="w-full h-full object-cover" />
+        <!-- Enroll button -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdadHimci_y-aQBjbMR57K5SyL8CN7SacE4-4gFTyedFW6GAA/viewform"
+          target="_blank" class="absolute bottom-4 left-[70%] -translate-x-1/2
+            sm:bottom-10 sm:left-[70%] sm:-translate-x-1/2
+            bg-yellow-400 text-black font-semibold
+            text-xs px-3 py-2
+            sm:text-lg sm:px-6 sm:py-2
+            rounded-full shadow-md hover:bg-yellow-500 transition z-10">
+          Enroll Now
+        </a>
       </div>
       <div class="swiper-slide">
         <img src="images/Slider3.jpeg" alt="Slide 3" class="w-full h-full object-cover" />
@@ -290,33 +339,137 @@
 
 
   <!-- Our Training -->
-  <div class="section" id="courses">
-    <h2 class="text-4xl font-bold text-center text-black mb-8">Our Training Programs</h2>
-    <div class="courses">
-      <div class="course"><strong>Python Full Stack</strong><br>₹4,399/-<br>3 Months</div>
-      <div class="course"><strong>Java Full Stack</strong><br>₹4,999/-<br>3 Months</div>
-      <div class="course"><strong>MERN Stack</strong><br>₹4,399/-<br>3 Months</div>
-      <div class="course"><strong>UI/UX Design</strong><br>₹2,399/-<br>2 Months</div>
-      <div class="course"><strong>Cloud/DevOps</strong><br>₹4,999/-<br>2 Months</div>
-      <div class="course"><strong>Data Analyst</strong><br>₹3,999/-<br>2 Months</div>
-    </div>
+<div class="section" id="Trainings">
+  <h2 class="text-4xl font-bold text-center text-black mb-8">Our Training Programs</h2>
+
+  <div class="courses">
+    <a id="enrollBtn1" target="_blank" href="https://example.com/python-form" class="course-card">
+      <img src="images/Course/python_fsd.png" alt="Python Full Stack" />
+      <div><strong>Python Full Stack</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+
+    <a id="enrollBtn2" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/java_fsd.png" alt="Java Full Stack" />
+      <div><strong>Java Full Stack Developer</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+
+    <a id="enrollBtn3" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/mern_fsd.png" alt="MERN Stack Developer" />
+      <div><strong>MERN Stack Developer</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+
+    <a id="enrollBtn4" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/php_develper.png" alt="PHP Developer–Laravel" />
+      <div><strong>PHP Developer–Laravel</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+
+    <a id="enrollBtn5" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/frontend_developer.png" alt="Frontend Developer - React JS " />
+      <div><strong>Frontend Developer - React JS </strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+
+    <a id="enrollBtn6" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/backend_developer.png" alt="Backend Developer" />
+      <div><strong>Backend Developer</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <a id="enrollBtn7" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/UIUX.png" alt="UI/UX" />
+      <div><strong>UI/UX</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <a id="enrollBtn8" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/data_analyst.png" alt="Data Analyst" />
+      <div><strong>Data Analyst</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <a id="enrollBtn9" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/data_mining.png" alt="Data Mining Specialist" />
+      <div><strong>Data Mining Specialist</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <a id="enrollBtn10" target="_blank" href="https://example.com/java-form" class="course-card">
+      <img src="images/Course/digital_marketing.png" alt="Digital Marketing" />
+      <div><strong>Digital Marketing</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <a id="enrollBtn11" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/database_management.png" alt="Database Management" />
+      <div><strong>Database Management</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <a id="enrollBtn12" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/cloud_computing.png" alt="Cloud Computing / DevOps" />
+      <div><strong>Cloud Computing / DevOps</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <a id="enrollBtn13" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/android_developer.png" alt="App / Android Development" />
+      <div><strong>App / Android Development</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+     <a id="enrollBtn14" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/flutter_developer.png" alt="Flutter App Development Training" />
+      <div><strong>Flutter App Development Training</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+     <a id="enrollBtn15" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/cyber_security.png" alt="Cyber Security" />
+      <div><strong>Cyber Security</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+         <a id="enrollBtn16" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/graphic_designer.png" alt="Graphic Designing" />
+      <div><strong>Graphic Designing</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+         <a id="enrollBtn17" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/arduino.png" alt="Arduino Robo Training" />
+      <div><strong>Arduino Robo Training</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+             <a id="enrollBtn18" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+      <img src="images/Course/IOT.png" alt="IoT" />
+      <div><strong>IoT</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+          class="text-gray-600">Know more</small></div>
+    </a>
+    <!-- <a href="https://example.com/java-form" class="course-card">
+      
+      <div><strong>+50 Courses</strong><br><small>Know more</small></div>
+    </a> -->
   </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button onclick="showMoreCourses()" id="moreBtn"
+      style="padding: 10px 20px; background: #facc15; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+      View More Training
+    </button>
+  </div>
+</div>
+
 
   <!-- Placement Partners -->
   <div class="section" id="partners">
     <h2 class="text-4xl font-bold text-center text-black mb-8">Placement Partners</h2>
     <div class="partners">
-      <div class="partner"><a href="#"><img src="images/Cloudcredit tech.jpg"
-            alt="Cloudcredit technologies pvt ltd"></a></div>
-      <div class="partner"><a href="#"><img src="images/Technohack.png" alt="Technohack solutions pvt ltd"></a></div>
-      <div class="partner"><a href="#"><img src="images/Codealpha.jpg" alt="CodeAlpha"></a></div>
-      <div class="partner"><a href="#"><img src="images/codtech.jpg" alt="Codtech"></a></div>
-      <div class="partner"><a href="#"><img src="images/prodigy.jpg" alt="Prodigy infotech"></a></div>
-      <div class="partner"><a href="#"><img src="images/softechnova.jpg" alt="Softechnova Enterprises"></a></div>
-      <div class="partner"><a href="#"><img src="images/oasis.jpg" alt="oasis infobyte"></a></div>
-      <div class="partner"><a href="#"><img src="images/cognifyz.png" alt="Cognifyz technology"></a></div>
-      <div class="partner"><a href="#"><img src="images/hex.png" alt="Hexsoftwares"></a></div>
-      <div class="partner"><a href="#"><img src="images/pinnacle.png" alt="Pinnacle"></a></div>
+            <div class="partner"><a href="#"><img src="images/partners/google.png" alt="Google"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/microsoft.png" alt="Technohack solutions pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/amazon.png" alt="Technohack solutions pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/colgate.png" alt="Technohack solutions pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/Cloudcredit tech.jpg"alt="Cloudcredit technologies pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/Technohack.png" alt="Technohack solutions pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/Codealpha.jpg" alt="CodeAlpha"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/codtech.jpg" alt="Codtech"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/prodigy.jpg" alt="Prodigy infotech"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/softechnova.jpg" alt="Softechnova Enterprises"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/oasis.jpg" alt="oasis infobyte"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/cognifyz.png" alt="Cognifyz technology"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/hex.png" alt="Hexsoftwares"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/pinnacle.png" alt="Pinnacle"></a></div>
     </div>
   </div>
 
@@ -337,7 +490,7 @@
 
         <span class="block mb-4">Believing in giving back to mankind, we offer affordable, industry-focused IT training
           programs, ensuring students and freshers gain practical skills with guaranteed internships or job
-          opportunities upon course completion.</span>
+          opportunities upon training completion.</span>
 
         <span class="block font-semibold mt-6 text-black text-xl">✨ Why businesses and learners trust
           UdindiaTech:</span>
@@ -368,9 +521,13 @@
     <h2 class="section-title">Why Choose <span style="color:#2563EB">UdindiaTech?</span></h2>
 
     <div class="points">
-      <p class="point">✅ 80% Scholarship on All Courses</p>
+
+      <p class="point">✅ 80% Scholarship on All Trainings</p>
+      <p class="point">✅ 100% Job or Internship Guarantee</p>
+      <p class="point">✅ 50+ Placements Partners</p>
       <p class="point">✅ Industry Expert Trainers</p>
       <p class="point">✅ Industries-Based Training</p>
+      <p class="point">✅ Resume Building & Interview Preparation</p>
       <p class="point">✅ Certificate & Placement Assistance</p>
     </div>
   </div>
@@ -453,7 +610,7 @@
         <ul class="space-y-2 text-sm text-gray-300">
           <li><a href="#home" class="hover:text-white transition">Home</a></li>
           <li><a href="#about" class="hover:text-white transition">About Us</a></li>
-          <li><a href="#services" class="hover:text-white transition">Services</a></li>
+          <li><a href="#training" class="hover:text-white transition">Trainings</a></li>
           <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
           <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
         </ul>
@@ -461,7 +618,7 @@
 
       <!-- Courses -->
       <div>
-        <h3 class="text-lg font-semibold mb-4">Our Courses</h3>
+        <h3 class="text-lg font-semibold mb-4">Our Training</h3>
         <ul class="space-y-2 text-sm text-gray-300">
           <li>Full Stack Development</li>
           <li>Cloud Computing</li>
@@ -495,6 +652,15 @@
 
 </body>
 <script>
+  //courses 
+  function showMoreCourses() {
+    const hiddenCourses = document.querySelectorAll('.hidden-course');
+    hiddenCourses.forEach(course => {
+      course.style.display = 'block';
+    });
+    document.getElementById('moreBtn').style.display = 'none';
+  }
+
   function toggleMenu() {
     const menu = document.getElementById('navLinks');
     menu.classList.toggle('show');
@@ -649,6 +815,14 @@
 
   points.forEach(point => observer.observe(point));
 
+// Update link js
+  const updatedEnrollLink = "https://docs.google.com/forms/d/e/1FAIpQLSdadHimci_y-aQBjbMR57K5SyL8CN7SacE4-4gFTyedFW6GAA/viewform"; // change this in future
+
+  // Loop through all IDs
+  for (let i = 1; i <= 18; i++) {
+    const btn = document.getElementById(`enrollBtn${i}`);
+    if (btn) btn.href = updatedEnrollLink;
+  }
 </script>
 
 </html>
