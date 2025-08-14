@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UdindiaTech - Premium IT Training</title>
+  <title>UDIndiaTech - Premium IT Training</title>
   <link rel="icon" href="images/UD logo.jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <!-- tailwind adding -->
@@ -80,6 +80,87 @@
       font-weight: 600;
     } */
 
+    /*Our projects   */
+
+    .project-slider {
+      position: relative;
+      max-width: 700px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid #eee;
+      background: #fff;
+    }
+
+    .project-slides {
+      display: flex;
+      animation: slideAnim 18s infinite;
+    }
+
+    .project-slide {
+      flex: 0 0 100%;
+      text-align: center;
+      background: #fff;
+    }
+
+    .project-slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      /* pura image dikhane ke liye */
+      background: #fff;
+    }
+
+    .project-slide p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    @keyframes slideAnim {
+      0% {
+        transform: translateX(0);
+      }
+
+      16.66% {
+        transform: translateX(0);
+      }
+
+      33.32% {
+        transform: translateX(-100%);
+      }
+
+      50% {
+        transform: translateX(-200%);
+      }
+
+      66.66% {
+        transform: translateX(-300%);
+      }
+
+      83.32% {
+        transform: translateX(-400%);
+      }
+
+      100% {
+        transform: translateX(-500%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .project-slide img {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-slide img {
+        height: 180px;
+      }
+    }
+
+
+
     .yellow-bar {
       background-color: #facc15;
       /* similar to Tailwind's yellow-400 */
@@ -112,7 +193,8 @@
       padding: 40px 20px;
       text-align: center;
     }
-/* partners css    style */
+
+    /* partners css    style */
     /* .courses, */
     .partners {
       display: flex;
@@ -152,41 +234,42 @@
     }
 
     /* Course css */
- .courses {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
-}
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
 
-.course-card {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  transition: 0.3s;
-}
+    .course-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      transition: 0.3s;
+    }
 
-.course-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-.course-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
+    .course-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
 
-.course-card div {
-  padding: 15px;
-}
-.hidden-course {
-  display: none;
-}
+    .course-card div {
+      padding: 15px;
+    }
+
+    .hidden-course {
+      display: none;
+    }
 
     @media(max-width:600px) {
 
@@ -258,6 +341,7 @@
     <!-- Navigation Links -->
     <div class="nav-links" id="navLinks">
       <a href="#">Home</a>
+      <a href="#projects">Our Projects</a>
       <a href="#Trainings">Trainings</a>
       <a href="#partners">Placements</a>
       <a href="#about">About</a>
@@ -318,6 +402,10 @@
   </div> -->
   <div class="yellow-bar">
     <div class="stats-container">
+       <div class="stat-block">
+        <div class="stat-number">🚀 70+</div>
+        <div class="stat-text">Projects Deployed</div>
+      </div>
       <div class="stat-block">
         <div class="stat-number">🎓 1000+</div>
         <div class="stat-text">Students Trained</div>
@@ -338,134 +426,208 @@
   </div>
 
 
+  <!-- Our Projects Slider -->
+  <section class="py-12 bg-white" id="projects">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Projects</h2>
+      <p class="text-lg max-w-2xl mx-auto mb-6 text-gray-700 leading-relaxed">
+        At <b>UDIndiaTech</b>, we specialize in delivering high-quality, fully customized IT solutions.
+        Our portfolio includes a diverse range of successfully deployed projects — from personal portfolios
+        and corporate websites to advanced, business-driven platforms.
+        With a focus on modern design, speed, and user experience, we ensure every project meets the highest standards
+        of quality and performance.
+        <br><br>
+        Contact us today for your project requirements — we deliver tailored solutions to match your needs and budget.
+      </p>
+
+      <!-- Our Projects Slider -->
+      <div class="project-slider">
+        <div class="project-slides">
+          <div class="project-slide">
+            <img src="images/Projects/interior.png" alt="Portfolio Website">
+            <p>Portfolio Website</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/darshanbook.png" alt="Booking Platform">
+            <p>Booking Platform</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/DDinter.png" alt="Portfolio Website">
+            <p>Portfolio Website</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/bus travels.jpeg" alt="Travels Booking Platform">
+            <p>Travels Booking Platform</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/wedding2.jpeg" alt="Wedding Portfolio">
+            <p>Wedding Portfolio</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/wedding.jpeg" alt="Wedding Portfolio">
+            <p>Wedding Portal</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/e-com1.jpeg" alt="Ecommerces websites">
+            <p>E-Commerce Website</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/e-com.jpeg" alt="Ecommerces websites">
+            <p>E-Commerce Website</p>
+          </div>
+          <div class="project-slide">
+            <img src="images/Projects/pet1.jpeg" alt="Ecommerces websites">
+            <p>Portfolio Website</p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSew0L7ny58PjpjS3VXIQeaaRJCxBMzy0UpLLM-tNQCEX-sxmw/viewform?usp=dialog', '_blank')"
+        class="text-black px-6 py-3 rounded-lg shadow transition" style="background:#FFD700;"
+        onmouseover="this.style.background='#E6C200'" onmouseout="this.style.background='#FFD700'">
+        Enquiry Now
+      </button>
+
+    </div>
+  </section>
+
+
+
   <!-- Our Training -->
-<div class="section" id="Trainings">
-  <h2 class="text-4xl font-bold text-center text-black mb-8">Our Training Programs</h2>
+  <div class="section" id="Trainings">
+    <h2 class="text-4xl font-bold text-center text-black mb-8">Our Training Programs</h2>
 
-  <div class="courses">
-    <a id="enrollBtn1" target="_blank" href="https://example.com/python-form" class="course-card">
-      <img src="images/Course/python_fsd.png" alt="Python Full Stack" />
-      <div><strong>Python Full Stack</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
+    <div class="courses">
+      <a id="enrollBtn1" target="_blank" href="https://example.com/python-form" class="course-card">
+        <img src="images/Course/python_fsd.png" alt="Python Full Stack" />
+        <div><strong>Python Full Stack</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
 
-    <a id="enrollBtn2" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/java_fsd.png" alt="Java Full Stack" />
-      <div><strong>Java Full Stack Developer</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
+      <a id="enrollBtn2" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/java_fsd.png" alt="Java Full Stack" />
+        <div><strong>Java Full Stack Developer</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
 
-    <a id="enrollBtn3" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/mern_fsd.png" alt="MERN Stack Developer" />
-      <div><strong>MERN Stack Developer</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
+      <a id="enrollBtn3" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/mern_fsd.png" alt="MERN Stack Developer" />
+        <div><strong>MERN Stack Developer</strong><br><small><i>Durations:</i>&nbsp;3 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
 
-    <a id="enrollBtn4" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/php_develper.png" alt="PHP Developer–Laravel" />
-      <div><strong>PHP Developer–Laravel</strong><br><small><i>Durations:</i>&nbsp;2.5 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
+      <a id="enrollBtn4" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/php_develper.png" alt="PHP Developer–Laravel" />
+        <div><strong>PHP Developer–Laravel</strong><br><small><i>Durations:</i>&nbsp;2.5 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
 
-    <a id="enrollBtn5" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/frontend_developer.png" alt="Frontend Developer - React JS " />
-      <div><strong>Frontend Developer - React JS </strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
+      <a id="enrollBtn5" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/frontend_developer.png" alt="Frontend Developer - React JS " />
+        <div><strong>Frontend Developer - React JS </strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
 
-    <a id="enrollBtn6" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/backend_developer.png" alt="Backend Developer" />
-      <div><strong>Backend Developer</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <a id="enrollBtn7" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/UIUX.png" alt="UI/UX" />
-      <div><strong>UI/UX</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <a id="enrollBtn8" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/data_analyst.png" alt="Data Analyst" />
-      <div><strong>Data Analyst</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <a id="enrollBtn9" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/data_mining.png" alt="Data Mining Specialist" />
-      <div><strong>Data Mining Specialist</strong><br><small><i>Durations:</i>&nbsp;1.5 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <a id="enrollBtn10" target="_blank" href="https://example.com/java-form" class="course-card">
-      <img src="images/Course/digital_marketing.png" alt="Digital Marketing" />
-      <div><strong>Digital Marketing</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <a id="enrollBtn11" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/database_management.png" alt="Database Management" />
-      <div><strong>Database Management</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <a id="enrollBtn12" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/cloud_computing.png" alt="Cloud Computing / DevOps" />
-      <div><strong>Cloud Computing / DevOps</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <a id="enrollBtn13" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/android_developer.png" alt="App / Android Development" />
-      <div><strong>App / Android Development</strong><br><small><i>Durations:</i>&nbsp;2.5 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-     <a id="enrollBtn14" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/flutter_developer.png" alt="Flutter App Development Training" />
-      <div><strong>Flutter App Development Training</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-     <a id="enrollBtn15" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/cyber_security.png" alt="Cyber Security" />
-      <div><strong>Cyber Security</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-         <a id="enrollBtn16" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/graphic_designer.png" alt="Graphic Designing" />
-      <div><strong>Graphic Designing</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-         <a id="enrollBtn17" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/arduino.png" alt="Arduino Robo Training" />
-      <div><strong>Arduino Robo Training</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-             <a id="enrollBtn18" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
-      <img src="images/Course/IOT.png" alt="IoT" />
-      <div><strong>IoT</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
-          class="text-gray-600">Know more</small></div>
-    </a>
-    <!-- <a href="https://example.com/java-form" class="course-card">
+      <a id="enrollBtn6" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/backend_developer.png" alt="Backend Developer" />
+        <div><strong>Backend Developer</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn7" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/UIUX.png" alt="UI/UX" />
+        <div><strong>UI/UX</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn8" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/data_analyst.png" alt="Data Analyst" />
+        <div><strong>Data Analyst</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn9" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/data_mining.png" alt="Data Mining Specialist" />
+        <div><strong>Data Mining Specialist</strong><br><small><i>Durations:</i>&nbsp;1.5 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn10" target="_blank" href="https://example.com/java-form" class="course-card">
+        <img src="images/Course/digital_marketing.png" alt="Digital Marketing" />
+        <div><strong>Digital Marketing</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn11" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/database_management.png" alt="Database Management" />
+        <div><strong>Database Management</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn12" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/cloud_computing.png" alt="Cloud Computing / DevOps" />
+        <div><strong>Cloud Computing / DevOps</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn13" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/android_developer.png" alt="App / Android Development" />
+        <div><strong>App / Android Development</strong><br><small><i>Durations:</i>&nbsp;2.5 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn14" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/flutter_developer.png" alt="Flutter App Development Training" />
+        <div><strong>Flutter App Development Training</strong><br><small><i>Durations:</i>&nbsp;2
+            Months</small><br><small class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn15" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/cyber_security.png" alt="Cyber Security" />
+        <div><strong>Cyber Security</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn16" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/graphic_designer.png" alt="Graphic Designing" />
+        <div><strong>Graphic Designing</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn17" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/arduino.png" alt="Arduino Robo Training" />
+        <div><strong>Arduino Robo Training</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small
+            class="text-gray-600">Know more</small></div>
+      </a>
+      <a id="enrollBtn18" target="_blank" href="https://example.com/java-form" class="course-card hidden-course">
+        <img src="images/Course/IOT.png" alt="IoT" />
+        <div><strong>IoT</strong><br><small><i>Durations:</i>&nbsp;2 Months</small><br><small class="text-gray-600">Know
+            more</small></div>
+      </a>
+      <!-- <a href="https://example.com/java-form" class="course-card">
       
       <div><strong>+50 Courses</strong><br><small>Know more</small></div>
     </a> -->
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showMoreCourses()" id="moreBtn"
+        style="padding: 10px 20px; background: #facc15; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+        View More Training
+      </button>
+    </div>
   </div>
-  <div style="text-align: center; margin-top: 20px;">
-    <button onclick="showMoreCourses()" id="moreBtn"
-      style="padding: 10px 20px; background: #facc15; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
-      View More Training
-    </button>
-  </div>
-</div>
 
 
   <!-- Placement Partners -->
   <div class="section" id="partners">
     <h2 class="text-4xl font-bold text-center text-black mb-8">Placement Partners</h2>
     <div class="partners">
-            <div class="partner"><a href="#"><img src="images/partners/google.png" alt="Google"></a></div>
-      <div class="partner"><a href="#"><img src="images/partners/microsoft.png" alt="Technohack solutions pvt ltd"></a></div>
-      <div class="partner"><a href="#"><img src="images/partners/amazon.png" alt="Technohack solutions pvt ltd"></a></div>
-      <div class="partner"><a href="#"><img src="images/partners/colgate.png" alt="Technohack solutions pvt ltd"></a></div>
-      <div class="partner"><a href="#"><img src="images/partners/Cloudcredit tech.jpg"alt="Cloudcredit technologies pvt ltd"></a></div>
-      <div class="partner"><a href="#"><img src="images/partners/Technohack.png" alt="Technohack solutions pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/google.png" alt="Google"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/microsoft.png" alt="Technohack solutions pvt ltd"></a>
+      </div>
+      <div class="partner"><a href="#"><img src="images/partners/amazon.png" alt="Technohack solutions pvt ltd"></a>
+      </div>
+      <div class="partner"><a href="#"><img src="images/partners/colgate.png" alt="Technohack solutions pvt ltd"></a>
+      </div>
+      <div class="partner"><a href="#"><img src="images/partners/Cloudcredit tech.jpg"
+            alt="Cloudcredit technologies pvt ltd"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/Technohack.png" alt="Technohack solutions pvt ltd"></a>
+      </div>
       <div class="partner"><a href="#"><img src="images/partners/Codealpha.jpg" alt="CodeAlpha"></a></div>
       <div class="partner"><a href="#"><img src="images/partners/codtech.jpg" alt="Codtech"></a></div>
       <div class="partner"><a href="#"><img src="images/partners/prodigy.jpg" alt="Prodigy infotech"></a></div>
-      <div class="partner"><a href="#"><img src="images/partners/softechnova.jpg" alt="Softechnova Enterprises"></a></div>
+      <div class="partner"><a href="#"><img src="images/partners/softechnova.jpg" alt="Softechnova Enterprises"></a>
+      </div>
       <div class="partner"><a href="#"><img src="images/partners/oasis.jpg" alt="oasis infobyte"></a></div>
       <div class="partner"><a href="#"><img src="images/partners/cognifyz.png" alt="Cognifyz technology"></a></div>
       <div class="partner"><a href="#"><img src="images/partners/hex.png" alt="Hexsoftwares"></a></div>
@@ -566,83 +728,83 @@
 
 
   <!-- Footer -->
- <footer class="bg-[#151515] text-white py-12 px-4 sm:px-8 lg:px-20" id="contact">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+  <footer class="bg-[#151515] text-white py-12 px-4 sm:px-8 lg:px-20" id="contact">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-    <!-- Company Info -->
-    <div class="text-left">
-      <div class="flex items-center space-x-4 mb-4 pl-2 sm:pl-0">
-        <img src="images/UD logo.jpg" alt="UD India Tech Logo" class="w-12 h-12 object-contain" />
-        <h2 class="text-xl sm:text-xl md:text-2xl font-bold">UD India Tech</h2>
+      <!-- Company Info -->
+      <div class="text-left">
+        <div class="flex items-center space-x-4 mb-4 pl-2 sm:pl-0">
+          <img src="images/UD logo.jpg" alt="UD India Tech Logo" class="w-12 h-12 object-contain" />
+          <h2 class="text-xl sm:text-xl md:text-2xl font-bold">UD India Tech</h2>
+        </div>
+        <p class="text-[15px] text-gray-300 mb-4 pl-2 sm:pl-0">
+          We craft powerful IT solutions and offer affordable, job-oriented training with real-world projects and
+          guaranteed internships.
+        </p>
+        <p>Follow us:</p>
+        <div class="flex space-x-4 mt-4 pl-2 sm:pl-0">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="images/instagram.jpg" alt="Instagram"
+              class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.png" alt="Facebook"
+              class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
+          </a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+            <img src="images/youtube.png" alt="YouTube"
+              class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
+          </a>
+          <a href="https://www.linkedin.com/company/udindiatech/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn"
+              class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
+          </a>
+        </div>
       </div>
-      <p class="text-[15px] text-gray-300 mb-4 pl-2 sm:pl-0">
-        We craft powerful IT solutions and offer affordable, job-oriented training with real-world projects and
-        guaranteed internships.
-      </p>
-      <p>Follow us:</p>
-      <div class="flex space-x-4 mt-4 pl-2 sm:pl-0">
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img src="images/instagram.jpg" alt="Instagram"
-            class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
-        </a>
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook"
-            class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
-        </a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube"
-            class="w-6 h-6 hover:scale-110 rounded-md transition-transform duration-200" />
-        </a>
-        <a href="https://www.linkedin.com/company/udindiatech/" target="_blank" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="LinkedIn"
-            class="w-6 h-6 hover:scale-110 rounded-sm transition-transform duration-200" />
-        </a>
+
+      <!-- Quick Links -->
+      <div class="text-left">
+        <h3 class="text-lg font-semibold mb-4 pl-2 sm:pl-0">Quick Links</h3>
+        <ul class="space-y-2 text-[15px] text-gray-300 pl-2 sm:pl-0">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#projects" class="hover:text-white transition">Our Projects</a></li>
+          <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#Trainings" class="hover:text-white transition">Trainings</a></li>
+          <li><a href="#partners" class="hover:text-white transition">Placements</a></li>
+          <li><a href="#testimonials" class="hover:text-white transition">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Courses -->
+      <div class="text-left">
+        <h3 class="text-lg font-semibold mb-4 pl-2 sm:pl-0">Our Training</h3>
+        <ul class="space-y-2 text-[15px] text-gray-300 pl-2 sm:pl-0">
+          <li><a href="#Trainings" class="hover:text-white transition">Full Stack Development</a></li>
+          <li><a href="#Trainings" class="hover:text-white transition">Cloud Computing</a></li>
+          <li><a href="#Trainings" class="hover:text-white transition">Data Science</a></li>
+          <li><a href="#Trainings" class="hover:text-white transition">Cyber Security</a></li>
+          <li><a href="#Trainings" class="hover:text-white transition">UI/UX Designing</a></li>
+          <li><a href="#Trainings" class="hover:text-white transition">And more</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="text-left">
+        <h3 class="text-lg font-semibold mb-4 pl-2 sm:pl-0">Contact Us</h3>
+        <ul class="space-y-3 text-[15px] text-gray-300 pl-2 sm:pl-0">
+          <li><strong>Address:</strong> Wagle Estate,Thane(W), Mumbai, India</li>
+          <li><strong>Email:</strong> info@udindiatech.co.in</li>
+          <li><strong>Phone:</strong> +91 98676 46549</li>
+          <!-- <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +91 98765 43210</li> -->
+        </ul>
       </div>
     </div>
 
-    <!-- Quick Links -->
-    <div class="text-left">
-      <h3 class="text-lg font-semibold mb-4 pl-2 sm:pl-0">Quick Links</h3>
-      <ul class="space-y-2 text-[15px] text-gray-300 pl-2 sm:pl-0">
-        <li><a href="#" class="hover:text-white transition">Home</a></li>
-        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
-        <li><a href="#Trainings" class="hover:text-white transition">Trainings</a></li>
-        <li><a href="#partners" class="hover:text-white transition">Placements</a></li>
-        <li><a href="#testimonials" class="hover:text-white transition">Testimonials</a></li>
-      </ul>
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
+      © 2024 UD India Tech. All rights reserved.
     </div>
-
-
-    <!-- Courses -->
-    <div class="text-left">
-      <h3 class="text-lg font-semibold mb-4 pl-2 sm:pl-0">Our Training</h3>
-      <ul class="space-y-2 text-[15px] text-gray-300 pl-2 sm:pl-0">
-        <li><a href="#Trainings" class="hover:text-white transition">Full Stack Development</a></li>
-        <li><a href="#Trainings" class="hover:text-white transition">Cloud Computing</a></li>
-        <li><a href="#Trainings" class="hover:text-white transition">Data Science</a></li>
-        <li><a href="#Trainings" class="hover:text-white transition">Cyber Security</a></li>
-        <li><a href="#Trainings" class="hover:text-white transition">UI/UX Designing</a></li>
-        <li><a href="#Trainings" class="hover:text-white transition">And more</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="text-left">
-      <h3 class="text-lg font-semibold mb-4 pl-2 sm:pl-0">Contact Us</h3>
-      <ul class="space-y-3 text-[15px] text-gray-300 pl-2 sm:pl-0">
-        <li><strong>Address:</strong> Bhayandar (E), Mumbai, India</li>
-        <li><strong>Email:</strong> info.udindiatech@gmail.com</li>
-        <li><strong>Phone:</strong> +91 98676 46549</li>
-        <!-- <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +91 98765 43210</li> -->
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bottom Bar -->
-  <div class="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
-    © 2024 UD India Tech. All rights reserved.
-  </div>
-</footer>
+  </footer>
 
 
   <!-- Swiper JS -->
@@ -675,99 +837,100 @@
   });
 
 
+
   //   ----------------------------------testimonls 
   const testimonials = [
-  {
-    quote: "UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent.",
-    name: "Priya S.",
-    course: "Java Full Stack",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Great platform for affordable IT training with real outcomes.",
-    name: "Rohit K.",
-    course: "Python Developer",
-    rating: "⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "The mentorship and hands-on UI/UX projects were game-changing. Highly recommend!",
-    name: "Anjali M.",
-    course: "UI/UX Designer",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Trainers are so experienced and helpful. I got placed at Infosys!",
-    name: "Arjun V.",
-    course: "Cloud DevOps",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "As a beginner, I never thought I’d feel so confident. The instructors are super helpful.",
-    name: "Neha D.",
-    course: "Frontend Development",
-    rating: "⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "They made backend so simple to understand. Projects helped a lot.",
-    name: "Karan M.",
-    course: "Node.js Development",
-    rating: "⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "The best part is the mentorship. They guide you like a friend.",
-    name: "Megha T.",
-    course: "Data Analytics",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "I cracked a job in less than 2 months. Thanks to the interview prep.",
-    name: "Nikhil R.",
-    course: "DevOps with AWS",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "From non-tech to tech job – that’s the magic of UdindiaTech!",
-    name: "Pooja S.",
-    course: "Full Stack Development",
-    rating: "⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Their doubt-solving support is faster than any other platform.",
-    name: "Sarthak J.",
-    course: "Cyber Security",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Daily assignments really helped me build discipline.",
-    name: "Isha V.",
-    course: "Data Science",
-    rating: "⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Even after the course, they helped me with job referrals.",
-    name: "Rahul P.",
-    course: "Cloud Computing",
-    rating: "⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Trainers were very humble and highly experienced.",
-    name: "Sneha K.",
-    course: "UI Designing",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Course content is very industry-focused, not boring theory.",
-    name: "Vivek S.",
-    course: "Backend Development",
-    rating: "⭐️⭐️⭐️⭐️"
-  },
-  {
-    quote: "Affordable fees and quality content – perfect combo.",
-    name: "Divya N.",
-    course: "Software Testing",
-    rating: "⭐️⭐️⭐️⭐️⭐️"
-  }
-]
+    {
+      quote: "UdindiaTech helped me get my first IT job with confidence! The live projects and mentorship were excellent.",
+      name: "Priya S.",
+      course: "Java Full Stack",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Great platform for affordable IT training with real outcomes.",
+      name: "Rohit K.",
+      course: "Python Developer",
+      rating: "⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "The mentorship and hands-on UI/UX projects were game-changing. Highly recommend!",
+      name: "Anjali M.",
+      course: "UI/UX Designer",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Trainers are so experienced and helpful. I got placed at Infosys!",
+      name: "Arjun V.",
+      course: "Cloud DevOps",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "As a beginner, I never thought I’d feel so confident. The instructors are super helpful.",
+      name: "Neha D.",
+      course: "Frontend Development",
+      rating: "⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "They made backend so simple to understand. Projects helped a lot.",
+      name: "Karan M.",
+      course: "Node.js Development",
+      rating: "⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "The best part is the mentorship. They guide you like a friend.",
+      name: "Megha T.",
+      course: "Data Analytics",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "I cracked a job in less than 2 months. Thanks to the interview prep.",
+      name: "Nikhil R.",
+      course: "DevOps with AWS",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "From non-tech to tech job – that’s the magic of UdindiaTech!",
+      name: "Pooja S.",
+      course: "Full Stack Development",
+      rating: "⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Their doubt-solving support is faster than any other platform.",
+      name: "Sarthak J.",
+      course: "Cyber Security",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Daily assignments really helped me build discipline.",
+      name: "Isha V.",
+      course: "Data Science",
+      rating: "⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Even after the course, they helped me with job referrals.",
+      name: "Rahul P.",
+      course: "Cloud Computing",
+      rating: "⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Trainers were very humble and highly experienced.",
+      name: "Sneha K.",
+      course: "UI Designing",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Course content is very industry-focused, not boring theory.",
+      name: "Vivek S.",
+      course: "Backend Development",
+      rating: "⭐️⭐️⭐️⭐️"
+    },
+    {
+      quote: "Affordable fees and quality content – perfect combo.",
+      name: "Divya N.",
+      course: "Software Testing",
+      rating: "⭐️⭐️⭐️⭐️⭐️"
+    }
+  ]
 
 
   const slider = document.getElementById("testimonial-slider");
@@ -775,9 +938,9 @@
   // Repeat testimonials to simulate infinite loop
   const extended = [...testimonials, ...testimonials];
 
- extended.forEach(data => {
-  const card = document.createElement("div");
-  card.innerHTML = `
+  extended.forEach(data => {
+    const card = document.createElement("div");
+    card.innerHTML = `
     <div class="bg-white shadow-md rounded-lg p-5 sm:p-6 w-[250px] sm:w-[300px] flex-shrink-0 text-left">
       <p class="text-gray-700 text-sm mb-3">"${data.quote}"</p>
       <h4 class="font-semibold text-base mb-1">${data.name}</h4>
@@ -785,8 +948,8 @@
       <div class="text-sm text-yellow-500"><strong>Rating:</strong> ${data.rating}</div>
     </div>
   `;
-  slider.appendChild(card);
-});
+    slider.appendChild(card);
+  });
 
   // Auto-slide
   let currentIndex = 0;
@@ -880,7 +1043,7 @@
 
   points.forEach(point => observer.observe(point));
 
-// Update link js
+  // Update link js
   const updatedEnrollLink = "https://docs.google.com/forms/d/e/1FAIpQLSdadHimci_y-aQBjbMR57K5SyL8CN7SacE4-4gFTyedFW6GAA/viewform"; // change this in future
 
   // Loop through all IDs
